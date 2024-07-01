@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Password Generator</title>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+  <div class="bg-red-200 w-[1500px] h-auto p-24 rounded-[180px] shadow-lg">
+    <h1 class="text-4xl font-bold mb-12 text-center">Password Generator</h1>
+    <div class="mb-12">
+      <input id="password" type="text" class="w-full p-6 text-center bg-gray-200 rounded-[45px] text-[24px]" readonly placeholder="Your generated password">
+    </div>
+    <div class="grid grid-cols-2 gap-12 mb-12 text-2xl">
+      <label class="flex items-center justify-center">
+        <input type="checkbox" id="includeUppercase" class="mr-4" checked>
+        <span>Include Uppercase</span>
+      </label>
+      <label class="flex items-center justify-center">
+        <input type="checkbox" id="includeLowercase" class="mr-4" checked>
+        <span>Include Lowercase</span>
+      </label>
+    </div>
+    <div class="grid grid-cols-2 gap-12 mb-12 text-2xl">
+      <label class="flex items-center justify-center">
+        <input type="checkbox" id="includeNumbers" class="mr-4" checked>
+        <span>Include Numbers</span>
+      </label>
+      <label class="flex items-center justify-center">
+        <input type="checkbox" id="includeSymbols" class="mr-4" checked>
+        <span>Include Symbols</span>
+      </label>
+    </div>
+    <div class="flex items-center justify-between mb-12 text-2xl">
+      <label for="lengthSlider" class="mr-4">Password Length:</label>
+      <input type="range" id="lengthSlider" min="8" max="32" value="16" class="w-full mr-4">
+      <span id="lengthValue">16</span>
+    </div>
+    <div class="flex justify-center mb-12">
+      <button id="copy" class="bg-blue-500 text-white py-4 px-12 rounded-[45px] hover:bg-blue-600 text-2xl mr-4">Copy</button>
+      <button id="generate" class="bg-black text-white py-4 px-12 rounded-[45px] text-2xl">Generate Password</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
